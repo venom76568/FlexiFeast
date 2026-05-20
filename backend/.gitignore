@@ -1,0 +1,16 @@
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Environment & Database
+.env
+.env.local
+*.db

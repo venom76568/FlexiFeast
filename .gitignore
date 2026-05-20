@@ -1,0 +1,29 @@
+# IDE / Editor configs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Local environment files
+.env
+.env.*
+
+# Python environment
+**/__pycache__/
+**/*.pyc
+backend/venv/
+
+# Node environment
+frontend/node_modules/
+frontend/dist/
+
+# Database files
+*.db
