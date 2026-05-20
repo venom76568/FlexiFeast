@@ -135,16 +135,16 @@ Ensure you create or configure `backend/.env` with your variables:
 ```env
 PROJECT_NAME=FlexiFeast
 API_V1_STR=/api
-DATABASE_URL=sqlite:///./flexifeast.db
-SECRET_KEY=generate_a_robust_key_for_production
+DATABASE_URL=your_database_url_here
+SECRET_KEY=your_secret_key_here
 BACKEND_CORS_ORIGINS=["http://localhost:5173", "http://127.0.0.1:5173"]
 
 # Third-Party Integrations
-TWILIO_ACCOUNT_SID=mock_sid
-TWILIO_AUTH_TOKEN=mock_token
-SLACK_BOT_TOKEN=mock_slack_token
+TWILIO_ACCOUNT_SID=your_twilio_account_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+SLACK_BOT_TOKEN=your_slack_bot_token
 SWIGGY_MCP_API_URL=https://api.swiggy.com/mcp/v1
-SWIGGY_MCP_API_KEY=mock_swiggy_key
+SWIGGY_MCP_API_KEY=your_swiggy_mcp_api_key
 ```
 
 #### Launching the Backend Server
