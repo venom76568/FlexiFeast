@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function ShoppingCart({ cart, setCart }) {
+const ShoppingCart = React.memo(({ cart, setCart }) => {
   const [isCheckout, setIsCheckout] = useState(false);
   const [phone, setPhone] = useState('');
   const [otp, setOtp] = useState('');
@@ -136,4 +136,6 @@ export default function ShoppingCart({ cart, setCart }) {
       )}
     </div>
   );
-}
+});
+
+export default ShoppingCart;

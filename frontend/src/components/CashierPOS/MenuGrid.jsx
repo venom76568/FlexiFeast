@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import ShoppingCart from './ShoppingCart';
 
+const STATIC_MENU_ITEMS = [
+  { id: 1, name: 'Chicken Sandwich', price: 120 },
+  { id: 2, name: 'Paneer Wrap', price: 150 },
+  { id: 3, name: 'Cold Coffee', price: 80 },
+  { id: 4, name: 'Masala Dosa', price: 90 },
+];
+
 export default function MenuGrid() {
-  const [menuItems, setMenuItems] = useState([
-    { id: 1, name: 'Chicken Sandwich', price: 120 },
-    { id: 2, name: 'Paneer Wrap', price: 150 },
-    { id: 3, name: 'Cold Coffee', price: 80 },
-    { id: 4, name: 'Masala Dosa', price: 90 },
-  ]);
+  const [menuItems, setMenuItems] = useState(STATIC_MENU_ITEMS);
   const [cart, setCart] = useState([]);
 
-  const addToCart = (item) => {
+  const addToCart = useCallback((item) => {
     setCart((prev) => {
       const existing = prev.find((i) => i.id === item.id);
       if (existing) {
@@ -20,7 +22,7 @@ export default function MenuGrid() {
       }
       return [...prev, { ...item, quantity: 1 }];
     });
-  };
+  }, []);
 
   return (
     <div className="flex h-[calc(100vh-80px)] gap-4">

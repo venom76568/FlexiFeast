@@ -1,8 +1,7 @@
 import json
 import logging
 import re
-import os
-
+from app.core.config import settings
 from app.services.swiggy_mcp import search_items, build_cart_deeplink
 
 logging.basicConfig(level=logging.INFO)
